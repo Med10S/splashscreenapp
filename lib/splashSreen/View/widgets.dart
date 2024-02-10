@@ -38,7 +38,7 @@ Widget appOnBoardingPage(
               //bool isthefisrttime=true
               //sharedprefe..
               //routing
-              Navigator.pushNamed(context, Routes.home);
+              Navigator.pushNamed(context, Routes.login);
               Global.storageService
                   .setBool(AppConst.GET_DEVICE_FIRST_OPEN, false);
             }

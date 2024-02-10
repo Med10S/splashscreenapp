@@ -13,7 +13,15 @@ class StorageService {
     return await _preferences.setBool(key, value);
   }
 
+  Future<bool> setString(String key, String value) async {
+    return await _preferences.setString(key, value);
+  }
+
   bool getDeviceFirstOpen() {
     return _preferences.getBool(AppConst.GET_DEVICE_FIRST_OPEN) ?? true;
+  }
+
+  bool isLoggedIn() {
+    return _preferences.getString(AppConst.User_Token) != "" ? true : false;
   }
 }
